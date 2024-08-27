@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!-- https://github.com/kunalmittal01/BookApp.git -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,7 +17,7 @@
                 <a href="index.html">HOME</a>
             </div>
             <div class="shop-cont">
-                <p>SHOPPING LIST</p>
+                <p id="shopping-btn">SHOPPING LIST</p>
                 <div class="bag">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M160 112c0-35.3 28.7-64 64-64s64 28.7 64 64l0 48-128 0 0-48zm-48 48l-64 0c-26.5 0-48 21.5-48 48L0 416c0 53 43 96 96 96l256 0c53 0 96-43 96-96l0-208c0-26.5-21.5-48-48-48l-64 0 0-48C336 50.1 285.9 0 224 0S112 50.1 112 112l0 48zm24 48a24 24 0 1 1 0 48 24 24 0 1 1 0-48zm152 24a24 24 0 1 1 48 0 24 24 0 1 1 -48 0z"/></svg>
                 </div>
@@ -28,15 +27,26 @@
             <div class="dark-mode">
                 <p id="dark-btn"></p>
             </div>
-            <div class="sign-up">
-                <p>Sign up </p>
+            <div class="sign-up design">
+                <p id="sign-up-content">Sign up</p>
+                <div class="arrow">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>
+                </div>
+            </div>
+            <div class="log-out design">
+                <p id="log-out-content">Log out</p>
                 <div class="arrow">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>
                 </div>
             </div>
         </div>
+        <div class="menu-icon">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M4 5C3.44772 5 3 5.44772 3 6C3 6.55228 3.44772 7 4 7H20C20.5523 7 21 6.55228 21 6C21 5.44772 20.5523 5 20 5H4ZM7 12C7 11.4477 7.44772 11 8 11H20C20.5523 11 21 11.4477 21 12C21 12.5523 20.5523 13 20 13H8C7.44772 13 7 12.5523 7 12ZM13 18C13 17.4477 13.4477 17 14 17H20C20.5523 17 21 17.4477 21 18C21 18.5523 20.5523 19 20 19H14C13.4477 19 13 18.5523 13 18Z" fill="#000000"></path></g></svg>
+            <div class="menu-list"></div>
+        </div>
     </nav>
-
+    <div class="shopping-list"></div>
+    <div class="message-box"></div>
     <div class="main">
         <div class="left">
             <ul class="sidebar-cont">
@@ -107,8 +117,40 @@
         </div>
         <div class="right">
             <div class="disp"></div>
+            <dialog id="modal"></dialog>
         </div>
     </div>
+    <div class="form"> 
+        <div class="form-cont slide-in-elliptic-right-fwd">
+            <button id="cancel">X</button>
+            <div class="forminp-cont slide-in-elliptic-left-fwd">
+                <input id="formname" type="text" placeholder="Your name" required>
+                <input id="formemail" type="email" placeholder="Your email" required>
+                <input id="formpass" type="password" placeholder="Your password" required>
+                <input id="formconf" type="password" placeholder="Confirm password" required>
+            </div>
+            <div class="terms">
+                <input type="checkbox" id="terms" required>
+                <label for="terms">I agree to the terms and conditions</label>
+            </div> 
+            <div class="inout-btns">
+                <button type="submit" id="form-sub">SIGN UP</button>
+                <button type="button" id="form-in">SIGN IN</button>
+            </div>    
+            <div class="form-nav">
+                <p id="form-nav-up">SIGN UP</p>
+                <p id="form-nav-in">SIGN IN</p>
+            </div>
+        </div>     
+    </div>
+    <footer>
+        <p>&copy; 2022 BookApp. All rights reserved.</p>
+        <div class="social">
+            <a href="#"><img src="https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white" alt="Facebook"></a>
+            <a href="#"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram"></a>
+            <a href="#"><img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter"></a>
+        </div>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
