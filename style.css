@@ -835,6 +835,30 @@ footer .social a img{
     nav .menu-icon {
         display: flex !important;
     }
+
+    #modal .modal-content {
+        width: 21rem;
+        gap: 0.5rem !important;
+    }
+    #modal .modal-content p {
+        font-size: 12px;
+        margin: 0;
+    }
+    #modal .modal-content h4 {
+        font-size: 20px;
+    }
+
+    #modal .infobtn-cont .infobtn {
+        padding: 0.5rem 1rem;
+    }
+
+    #modal .info-img img {
+        width: 130px;
+        height: 220px;
+    }
+    #modal .book-info {
+        gap: 0.8rem;
+    }
 }
 
 @media screen and (max-width: 750px) {
